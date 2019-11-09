@@ -4,6 +4,7 @@
 - name: Install essential utils
   apt: 
     name:
+      - openssh-server
       - nano
       - joe
       - git
