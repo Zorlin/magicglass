@@ -1,0 +1,6 @@
+---
+# Settings for the Ansible Controller
+
+# Do we want to set up prerequisites for deploying AWX?
+# This does not fully set up AWX, just makes it easier.
+deploy_awx: true

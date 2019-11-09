@@ -1,0 +1,22 @@
+---
+# file: controller.yml
+
+# This playbook is intended to set up some initial
+# services and goodies on a brand new Controller host.
+
+- hosts: controller
+  remote_user: 'wings'
+  vars_files:
+    - "vars/controller.yml"
+  become: yes
+
+  tasks:
+  - name: Install essential utils
+    apt: name={{ item }} state=latest
+    with_items:
+      - nano
+      - joe
+      - git
+      - screen
+      - tmux
+      - molly-guard
