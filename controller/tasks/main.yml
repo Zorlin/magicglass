@@ -1,0 +1,5 @@
+---
+# Name: Install and configure our controller
+
+- name: Debug - tell us we are installing controller
+  debug: msg="Testing - {{ deploy_awx }}"

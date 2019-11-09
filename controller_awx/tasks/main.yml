@@ -1,0 +1,5 @@
+---
+# name: Install AWX dependencies
+
+- name: Debug - tell us we are installing AWX
+  debug: msg="Testing - {{ deploy_awx }}"

@@ -10,6 +10,11 @@
     - "vars/controller.yml"
   become: yes
 
+  roles:
+  - controller
+  - { role: controller_awx,
+    when: deploy_awx == true }
+
   tasks:
   - name: Install essential utils
     apt: name={{ item }} state=latest
