@@ -14,14 +14,3 @@
   - controller
   - { role: controller_awx,
     when: deploy_awx == true }
-
-  tasks:
-  - name: Install essential utils
-    apt: name={{ item }} state=latest
-    with_items:
-      - nano
-      - joe
-      - git
-      - screen
-      - tmux
-      - molly-guard

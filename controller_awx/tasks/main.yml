@@ -1,5 +1,33 @@
 ---
 # name: Install AWX dependencies
 
-- name: Debug - tell us we are installing AWX
-  debug: msg="Testing - {{ deploy_awx }}"
+- name: Install Python dependencies
+  apt:
+    name:
+      - python
+      - python-pip
+    state: latest
+
+- name: Add Ansible apt keys
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 93C4A3FD7BB9C367
+
+- name: Add Ansible apt repository
+  apt_repository:
+    repo: deb http://ppa.launchpad.net/ansible/ansible/ubuntu bionic main
+
+    state: present
+    update_cache: yes
+
+- name: Install/upgrade to the latest version of Ansible
+  apt: name=ansible state=latest
+
+- name: Install Docker CE from the Ubuntu repos
+  apt: name=docker.io state=latest
+
+- name: Install docker Python module
+  pip: name=docker state=latest
+
+- name: Install Docker Compose
+  pip: name=docker-compose state=latest

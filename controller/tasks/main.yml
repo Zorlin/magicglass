@@ -1,5 +1,16 @@
 ---
 # Name: Install and configure our controller
 
-- name: Debug - tell us we are installing controller
-  debug: msg="Testing - {{ deploy_awx }}"
+- name: Install essential utils
+  apt: 
+    name:
+      - nano
+      - joe
+      - git
+      - screen
+      - tmux
+      - molly-guard
+    state: latest
+
+- name: Install KeePass
+  apt: name=keepass2 state=latest
