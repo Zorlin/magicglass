@@ -12,5 +12,4 @@
 
   roles:
   - controller
-  - { role: controller_awx,
-    when: deploy_awx == true }
+  - { role: controller_awx, when: deploy_awx == true }
