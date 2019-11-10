@@ -1,0 +1,22 @@
+---
+# file: bootstrap.yml
+
+# This playbook is intended to set up keys and other
+# goodies for new Ansible hosts. Put new hosts in bootstrap
+# and then run it according to the instructions in the repo.
+
+- hosts: bootstrap
+  become: yes
+
+  tasks:
+  - name: Users - Create the 'glass' user for management purposes
+    user: name=glass shell=/bin/bash comment="Magic Glass Management User"
+
+  - name: Groups - Add the 'glass' user to the sudoers user group.
+    user: name=glass groups='{{ sudo_group }}'
+
+  - name: SSH - Add public key to the remote host
+    authorized_key: user='{{ glass_user }}' key="{{ lookup('file', 'secrets/ssh/glass-deploy.pub') }}"
+
+  - name: Sudo - Add an additional "sudoers" policy to allow for passwordless sudo
+    template: src=sudo/sudoers.d/glass.j2 dest=/etc/sudoers.d/glass validate='/usr/sbin/visudo -cf %s' mode=0440

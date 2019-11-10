@@ -1,0 +1,12 @@
+---
+# file: group_vars/all
+
+# Username of "glass" management user.
+glass_user: glass
+
+# Location of "glass" key
+ansible_ssh_private_key_file: 'secrets/ssh/glass-deploy'
+
+# Group used for sudoers access
+# TODO: Move to bootstrap?
+sudo_group: sudo

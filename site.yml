@@ -1,0 +1,11 @@
+---
+# file: site.yml
+
+# This master playbook pulls in other playbooks.
+
+- hosts: all
+  remote_user: "{{ glass_user }}"
+  become: yes
+
+  roles:
+  - base
