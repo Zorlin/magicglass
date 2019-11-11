@@ -1,0 +1,15 @@
+---
+# file: genesis.yml
+
+# This playbook is intended to set up the Genesis host
+
+- hosts: genesis
+  remote_user: "{{ glass_user }}"
+  vars_files:
+    - "vars/genesis.yml"
+  become: yes
+
+  roles:
+  - base
+  - mariadb
+  - gitea
