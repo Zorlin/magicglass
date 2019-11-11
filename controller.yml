@@ -4,7 +4,7 @@
 # This playbook is intended to set up some initial
 # services and goodies on a brand new Controller host.
 
-- hosts: controller
+- hosts: localhost
   remote_user: 'wings'
   vars_files:
     - "vars/controller.yml"

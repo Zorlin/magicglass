@@ -11,6 +11,7 @@
       - screen
       - tmux
       - molly-guard
+      - htop
     state: latest
 
 - name: Install KeePass
