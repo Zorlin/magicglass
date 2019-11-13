@@ -11,4 +11,5 @@
       - screen
       - tmux
       - molly-guard
+      - python-apt
     state: latest
