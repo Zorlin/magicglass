@@ -1,0 +1,8 @@
+---
+# Name: Install and configure Postfix
+
+- name: Install Postfix
+  apt: 
+    name:
+      - postfix
+    state: latest

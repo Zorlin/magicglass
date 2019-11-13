@@ -1,0 +1,23 @@
+---
+# file: mail_servers.yml
+
+# This playbook attempts to configure and setup mail servers
+# Note that the list of roles is aspirational at best and is heavily based
+# on the Mail-in-a-Box Systems Architecture.
+
+- hosts: mail_servers
+  remote_user: "{{ glass_user }}"
+  become: yes
+
+  roles:
+  - postfix
+#  - opendkim
+#  - opendmarc
+#  - postgrey
+#  - dovecot
+#  - spamassassin
+#  - fail2ban
+#  - zpush
+#  - roundcubemail
+#  - nextcloud
+#  - Managesieve

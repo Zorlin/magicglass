@@ -10,3 +10,5 @@
 
   roles:
   - base
+
+- import_playbook: mail_servers.yml
