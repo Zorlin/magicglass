@@ -6,3 +6,19 @@
     name:
       - postfix
     state: latest
+
+- name: Set our mailname
+  template:
+    src: mailname.j2
+    dest: /etc/mailname
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Configure Postfix main with mostly default settings
+  template:
+    src: main.cf.j2
+    dest: /etc/postfix/main.cf
+    owner: root
+    group: root
+    mode: '0644'
