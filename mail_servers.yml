@@ -10,6 +10,7 @@
   become: yes
 
   roles:
+  - mail_testing
   - postfix
 #  - opendkim
 #  - opendmarc
