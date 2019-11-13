@@ -1,7 +1,8 @@
 ---
 # file: site.yml
 
-# This master playbook pulls in other playbooks.
+# This master playbook pulls in other playbooks, as well
+# as applying some basic settings that we want all nodes to have.
 
 - hosts: all
   remote_user: "{{ glass_user }}"
