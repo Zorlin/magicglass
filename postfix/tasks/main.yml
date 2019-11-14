@@ -22,3 +22,11 @@
     owner: root
     group: root
     mode: '0644'
+
+- name: Install a strong 2048-bit Diffie-Hellman group
+  copy:
+    src: dhparams.pem
+    dest: /etc/postfix/dhparams.pem
+    owner: root
+    group: root
+    mode: '0644'
