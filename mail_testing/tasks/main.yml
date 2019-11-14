@@ -6,4 +6,6 @@
     name:
       - mutt
       - swaks
+      - curl
+      - netcat
     state: latest
