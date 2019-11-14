@@ -24,7 +24,7 @@
     mode: '0644'
   notify: restart Postfix
 
-- name: Install a strong 2048-bit Diffie-Hellman group
+- name: Install a strong 2048-bit Diffie-Hellman group file
   copy:
     src: dhparams.pem
     dest: /etc/postfix/dhparams.pem
