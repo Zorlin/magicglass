@@ -15,9 +15,9 @@
   - nginx
   - letsencrypt
   - dovecot
+  - postgrey
 #  - opendkim
 #  - opendmarc
-#  - postgrey
 #  - spamassassin
 #  - postsrsd
 #  - fail2ban

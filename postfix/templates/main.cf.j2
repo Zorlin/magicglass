@@ -55,3 +55,7 @@ smtpd_tls_exclude_ciphers = aNULL, eNULL, EXPORT, DES, RC4, MD5, PSK, aECDH, EDH
 
 # Use Maildir format instead of default mail format
 home_mailbox = Maildir/
+
+# Enable Postgrey
+smtpd_recipient_restrictions =
+  check_policy_service inet:127.0.0.1:10030
