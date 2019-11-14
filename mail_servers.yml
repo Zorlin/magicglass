@@ -14,7 +14,7 @@
   - postfix
   - nginx
   - letsencrypt
-#  - dovecot
+  - dovecot
 #  - opendkim
 #  - opendmarc
 #  - postgrey
