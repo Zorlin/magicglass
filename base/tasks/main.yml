@@ -13,4 +13,5 @@
       - molly-guard
       - python-apt
       - man-db
+      - curl
     state: latest
