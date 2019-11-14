@@ -28,7 +28,7 @@
 #    group: root
 #    mode: '0644'
 
-- name: Configure Dovecot mailbox settings
+- name: Configure Dovecot mailbox settings 10-mail.conf
   template:
     src: conf.d/10-mail.conf.j2
     dest: /etc/dovecot/conf.d/10-mail.conf
@@ -37,10 +37,19 @@
     mode: '0644'
   notify: restart Dovecot
 
-- name: Configure Dovecot SSL settings
+- name: Configure Dovecot SSL settings 10-ssl.conf
   template:
     src: conf.d/10-ssl.conf.j2
     dest: /etc/dovecot/conf.d/10-ssl.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify: restart Dovecot
+
+- name: Configure Dovecot master settings 10-master.conf
+  template:
+    src: conf.d/10-master.conf.j2
+    dest: /etc/dovecot/conf.d/10-master.conf
     owner: root
     group: root
     mode: '0644'
