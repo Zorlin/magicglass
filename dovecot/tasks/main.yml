@@ -46,6 +46,15 @@
     mode: '0644'
   notify: restart Dovecot
 
+- name: Configure Dovecot Auth settings 10-auth.conf
+  template:
+    src: conf.d/10-auth.conf.j2
+    dest: /etc/dovecot/conf.d/10-auth.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify: restart Dovecot
+
 - name: Configure Dovecot master settings 10-master.conf
   template:
     src: conf.d/10-master.conf.j2
