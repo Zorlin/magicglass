@@ -41,3 +41,22 @@
     owner: root
     group: root
     mode: '0644'
+
+# Symlinks for exim SSL to hopefully work
+- name: Set up SSL cert symlink
+  file:
+    src: /etc/letsencrypt/live/mail.windowpa.in/fullchain.pem
+    dest: /etc/exim4/exim.crt
+    owner: root
+    group: root
+    mode: '0644'
+    state: link
+
+- name: Set up SSL key symlink
+  file:
+    src: /etc/letsencrypt/live/mail.windowpa.in/privkey.pem
+    dest: /etc/exim4/exim.key
+    owner: root
+    group: root
+    mode: '0644'
+    state: link
