@@ -11,11 +11,9 @@
 
   roles:
   - mail_testing
-  - postfix
   - nginx
   - letsencrypt
   - dovecot
-  - postgrey
 #  - opendkim
 #  - opendmarc
 #  - spamassassin
@@ -25,3 +23,7 @@
 #  - roundcubemail
 #  - nextcloud
 #  - Managesieve
+
+# Archived roles
+#  - postfix
+#  - postgrey
