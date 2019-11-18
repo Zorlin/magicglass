@@ -14,7 +14,8 @@
   - nginx
   - letsencrypt
   - dovecot
-  - exim4
+#  - exim4
+  - postfix
 #  - opendkim
 #  - opendmarc
 #  - spamassassin
