@@ -45,7 +45,7 @@
 # Symlinks for exim SSL to hopefully work
 - name: Set up SSL cert symlink
   file:
-    src: /etc/letsencrypt/live/mail.windowpa.in/fullchain.pem
+    src: /etc/letsencrypt/live/mail.windowpa.in/cert.pem
     dest: /etc/exim4/exim.crt
     owner: root
     group: root
