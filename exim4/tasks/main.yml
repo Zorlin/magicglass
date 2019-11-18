@@ -1,0 +1,34 @@
+---
+# Name: Install and configure exim MTA
+
+- name: Install exim4
+  apt: 
+    name:
+      - exim4-base
+      - exim4-daemon-heavy
+    state: latest
+
+- name: Configure stored debconf options (update-exim4.conf.conf)
+  template:
+    src: update-exim4.conf.conf.j2
+    dest: /etc/exim4/update-exim4.conf.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify: run update-exim4.conf
+
+- name: Set our mailname
+  template:
+    src: mailname.j2
+    dest: /etc/mailname
+    owner: root
+    group: root
+    mode: '0644'
+  
+- name: Configure /etc/aliases for local mail
+  template:
+    src: aliases.j2
+    dest: /etc/aliases
+    owner: root
+    group: root
+    mode: '0644'
