@@ -17,6 +17,15 @@
     mode: '0644'
   notify: run update-exim4.conf
 
+- name: Configure our own override options
+  template:
+    src: exim4.conf.localmacros.j2
+    dest: /etc/exim4/exim4.conf.localmacros
+    owner: root
+    group: root
+    mode: '0644'
+  notify: run update-exim4.conf
+
 - name: Set our mailname
   template:
     src: mailname.j2
