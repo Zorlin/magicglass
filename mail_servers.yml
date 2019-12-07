@@ -16,6 +16,7 @@
   - dovecot
   - postfix
   - spamassassin
+  - clamav
 #  - exim4
 #  - opendkim
 #  - opendmarc
