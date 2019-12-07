@@ -14,11 +14,11 @@
   - nginx
   - letsencrypt
   - dovecot
-#  - exim4
   - postfix
+  - spamassassin
+#  - exim4
 #  - opendkim
 #  - opendmarc
-#  - spamassassin
 #  - postsrsd
 #  - fail2ban
 #  - zpush
