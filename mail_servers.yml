@@ -18,6 +18,7 @@
   - spamassassin
   - clamav
   - opendkim
+  - pflogsumm
 #  - opendmarc
 #  - postsrsd
 #  - fail2ban
