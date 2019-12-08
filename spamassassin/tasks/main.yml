@@ -24,3 +24,8 @@
     group: root
     mode: '0644'
 
+- name: Enable and start SpamAssassin service
+  systemd:
+    name: spamassassin
+    enabled: yes
+    state: started
