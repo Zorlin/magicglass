@@ -17,7 +17,7 @@
   - postfix
   - spamassassin
   - clamav
-#  - opendkim
+  - opendkim
 #  - opendmarc
 #  - postsrsd
 #  - fail2ban
